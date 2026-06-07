@@ -23,7 +23,7 @@ export function LinkButton({
   return (
     <Link
       className={cn(
-        "inline-flex h-12 items-center justify-center rounded-full px-6 text-sm font-semibold transition duration-300 ease-out active:translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]",
+        "inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-center text-base font-semibold leading-tight transition duration-300 ease-out active:translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]",
         variants[variant],
         className,
       )}

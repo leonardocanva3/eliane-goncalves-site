@@ -9,21 +9,21 @@ import { whatsappClickAttributes } from "@/lib/analytics/actions";
 
 export function CtaSection() {
   return (
-    <Section className="pb-24">
+    <Section className="pb-20 sm:pb-24">
       <Container>
         <div className="relative overflow-hidden rounded-[32px] border border-[var(--color-line)] bg-[var(--color-navy)] text-white shadow-[0_30px_84px_rgba(13,43,82,0.14)]">
           <BrandOrnament className="absolute left-[45%] top-7 hidden h-28 w-24 opacity-[0.18] lg:block" />
           <span className="absolute left-0 top-0 h-px w-1/3 bg-gradient-to-r from-[var(--color-accent)] to-transparent" />
           <div className="grid gap-0 lg:grid-cols-[1fr_18rem] lg:items-stretch">
-            <div className="px-6 py-12 sm:px-10 lg:px-14">
+            <div className="px-5 py-10 sm:px-10 sm:py-12 lg:px-14">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-accent)]">
+                <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-accent)] sm:tracking-[0.09em]">
                   Agendamento
                 </p>
-                <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+                <h2 className="mt-4 max-w-3xl text-[clamp(1.95rem,7.8vw,2.45rem)] font-semibold leading-[1.12] tracking-tight sm:text-4xl">
                   {onlineCtaContent.title}
                 </h2>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-white/78">
+                <p className="mt-4 max-w-2xl text-base leading-8 text-white/82 sm:leading-7">
                   {onlineCtaContent.description}
                 </p>
               </div>

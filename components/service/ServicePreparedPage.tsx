@@ -63,26 +63,26 @@ export function ServicePreparedPage({ service }: { service: ServiceContent }) {
       />
       <Section>
         <Container>
-          <div className="relative grid gap-8 overflow-hidden rounded-[32px] border border-white/80 bg-white/60 p-6 shadow-[var(--shadow-soft)] backdrop-blur-2xl sm:p-10 lg:grid-cols-[1fr_0.78fr] lg:p-12">
+          <div className="relative grid gap-8 overflow-hidden rounded-[28px] border border-white/80 bg-white/60 p-5 shadow-[var(--shadow-soft)] backdrop-blur-2xl sm:rounded-[32px] sm:p-10 lg:grid-cols-[1fr_0.78fr] lg:p-12">
             <div className="absolute right-0 top-0 h-56 w-56 translate-x-1/3 -translate-y-1/3 rounded-full bg-[rgba(201,161,91,0.10)] blur-3xl" />
             <div className="relative z-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]">
+              <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
                 {service.eyebrow}
               </p>
-              <h1 className="mt-5 text-[2.55rem] font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-[3.3rem]">
+              <h1 className="mt-5 text-[clamp(2.18rem,9.4vw,2.9rem)] font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-[3.3rem]">
                 {formatDisplayText(service.title)}
               </h1>
               {service.subtitle ? (
-                <p className="mt-5 text-lg font-medium leading-8 text-[var(--color-brand-blue)]">
+                <p className="mt-5 text-[1.0625rem] font-medium leading-8 text-[var(--color-brand-blue)] sm:text-lg">
                   {service.subtitle}
                 </p>
               ) : null}
-              <p className="mt-8 text-lg leading-8 text-[var(--color-text-muted)]">
+              <p className="mt-6 text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:mt-8 sm:text-lg">
                 {service.summary}
               </p>
             </div>
             {image ? (
-              <div className="relative min-h-[26rem] overflow-hidden rounded-[28px] border border-[var(--color-line)] bg-[var(--color-surface-muted)] shadow-[var(--shadow-soft)]">
+              <div className="relative min-h-[22rem] overflow-hidden rounded-[26px] border border-[var(--color-line)] bg-[var(--color-surface-muted)] shadow-[var(--shadow-soft)] sm:min-h-[26rem] sm:rounded-[28px]">
                 <Image
                   alt={image.alt}
                   className={image.fit}

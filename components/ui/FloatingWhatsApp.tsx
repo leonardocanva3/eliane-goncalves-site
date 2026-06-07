@@ -7,7 +7,7 @@ export function FloatingWhatsApp() {
   return (
     <a
       aria-label="Agendar consulta pelo WhatsApp"
-      className="animate-whatsapp-breathe group fixed bottom-5 right-5 z-50 inline-flex h-14 items-center justify-center gap-3 rounded-full border border-white/80 bg-[var(--color-brand-blue)] px-4 text-white shadow-[0_18px_48px_rgba(13,43,82,0.14)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-blue-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:bottom-7 sm:right-7 sm:h-16 sm:px-5"
+      className="animate-whatsapp-breathe group fixed bottom-4 right-4 z-50 inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-white/80 bg-[var(--color-brand-blue)] px-4 text-white shadow-[0_18px_48px_rgba(13,43,82,0.14)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-blue-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:bottom-7 sm:right-7 sm:min-h-16 sm:px-5"
       href={whatsappHref}
       rel="noopener noreferrer"
       target="_blank"
@@ -31,7 +31,7 @@ export function FloatingWhatsApp() {
           fill="currentColor"
         />
       </svg>
-      <span className="hidden pr-1 text-sm font-semibold tracking-normal sm:inline">
+      <span className="hidden pr-1 text-base font-semibold tracking-normal sm:inline">
         WhatsApp
       </span>
     </a>

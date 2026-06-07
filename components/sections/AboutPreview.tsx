@@ -11,10 +11,10 @@ export function AboutPreview() {
     <Section>
       <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]">
+          <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
             Sobre
           </p>
-          <h2 className="mt-4 text-[2.15rem] font-semibold leading-tight tracking-tight text-[var(--color-navy)] sm:text-[2.65rem] lg:text-[3.25rem]">
+          <h2 className="mt-4 text-[clamp(2.05rem,8.5vw,2.65rem)] font-semibold leading-[1.1] tracking-tight text-[var(--color-navy)] sm:text-[2.65rem] lg:text-[3.25rem]">
             {homeContent.aboutTitle}
           </h2>
           <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-[32px] border border-[var(--color-line)] bg-[var(--color-brand-blue-pale)] shadow-[var(--shadow-soft)] before:absolute before:inset-3 before:z-10 before:rounded-[26px] before:border before:border-[rgba(201,161,91,0.32)] before:content-['']">
@@ -37,7 +37,7 @@ export function AboutPreview() {
             <span className="h-px w-14 bg-[var(--color-accent)]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
           </div>
-          <p className="text-lg leading-8 text-[var(--color-text-muted)]">
+          <p className="text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:text-lg">
             {homeContent.aboutText}
           </p>
           <div className="mt-8">

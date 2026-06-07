@@ -11,15 +11,15 @@ type WhatsappCtaProps = {
 
 export function WhatsappCta({ title, description }: WhatsappCtaProps) {
   return (
-    <Section className="py-16">
+    <Section className="py-12 sm:py-16">
       <Container>
-        <div className="rounded-[32px] border border-[var(--color-line)] bg-white px-6 py-10 shadow-[var(--shadow-soft)] sm:px-10">
+        <div className="rounded-[28px] border border-[var(--color-line)] bg-white px-5 py-9 shadow-[var(--shadow-soft)] sm:rounded-[32px] sm:px-10 sm:py-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-navy)]">
+              <h2 className="text-[clamp(1.9rem,7.5vw,2.35rem)] font-semibold leading-[1.12] tracking-tight text-[var(--color-navy)] sm:text-3xl">
                 {title}
               </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--color-text-muted)]">
+              <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--color-text-muted)] sm:leading-7">
                 {description}
               </p>
             </div>

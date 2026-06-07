@@ -52,40 +52,40 @@ export default function ServicesPage() {
       <Section>
         <Container>
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]">
+            <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
               {onlineServicesContent.title}
             </p>
-            <h1 className="mt-4 text-[2.55rem] font-semibold leading-tight tracking-tight text-[var(--color-navy)] sm:text-[3.3rem]">
+            <h1 className="mt-4 text-[clamp(2.2rem,9.4vw,2.9rem)] font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-[3.3rem]">
               {onlineServicesContent.subtitle}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-[var(--color-text-muted)]">
+            <p className="mt-5 text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:mt-6 sm:text-lg">
               {onlineServicesContent.description}
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-9 grid gap-4 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {servicesContent.map((service, index) => (
               <Link className="min-w-0" href={`/${service.slug}`} key={service.slug}>
-                <Card className="relative h-full min-w-0 min-h-[16rem] overflow-hidden p-8 transition hover:-translate-y-1 hover:border-[var(--color-accent-soft)]">
+                <Card className="relative h-full min-h-[14rem] min-w-0 overflow-hidden p-6 transition hover:-translate-y-1 hover:border-[var(--color-accent-soft)] sm:min-h-[16rem] sm:p-8">
                   <span className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-70" />
                   <span className="mb-6 flex items-center justify-between">
                     <span className="block h-2 w-2 rounded-full bg-[var(--color-accent)] shadow-[0_0_0_7px_rgba(201,161,91,0.12)]" />
-                    <span className="text-xs font-semibold text-[rgba(13,43,82,0.28)]">
+                    <span className="text-sm font-semibold text-[rgba(13,43,82,0.36)]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </span>
-                  <p className="text-xs font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]">
+                  <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
                     {service.eyebrow}
                   </p>
-                  <h2 className="mt-4 text-[1.65rem] font-semibold leading-tight tracking-tight text-[var(--color-navy)]">
+                  <h2 className="mt-4 text-[1.55rem] font-semibold leading-tight tracking-tight text-[var(--color-navy)] sm:text-[1.65rem]">
                     {service.title}
                   </h2>
-                  <p className="mt-5 text-base leading-7 text-[var(--color-text)]">
+                  <p className="mt-4 text-base leading-8 text-[var(--color-text)] sm:mt-5 sm:leading-7">
                     {service.summary}
                   </p>
                 </Card>
               </Link>
             ))}
-            <Card className="relative flex h-full min-h-[22rem] min-w-0 flex-col justify-center overflow-hidden border-[rgba(201,161,91,0.36)] bg-[var(--color-navy)] p-8 text-white shadow-[0_24px_70px_rgba(13,43,82,0.16)] hover:border-[var(--color-accent)] hover:bg-[var(--color-navy)]">
+            <Card className="relative flex h-full min-h-[20rem] min-w-0 flex-col justify-center overflow-hidden border-[rgba(201,161,91,0.36)] bg-[var(--color-navy)] p-6 text-white shadow-[0_24px_70px_rgba(13,43,82,0.16)] hover:border-[var(--color-accent)] hover:bg-[var(--color-navy)] sm:min-h-[22rem] sm:p-8">
               <span className="absolute right-0 top-0 h-28 w-28 translate-x-1/3 -translate-y-1/3 rounded-full border border-[rgba(201,161,91,0.28)]" />
               <span className="absolute bottom-0 left-8 h-px w-28 bg-[var(--color-accent)]" />
               <BrandOrnament className="absolute right-6 top-6 h-20 w-16 opacity-[0.18]" />

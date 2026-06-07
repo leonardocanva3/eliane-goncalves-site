@@ -16,11 +16,11 @@ export default function ContactPage() {
     <Section>
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-[32px] border border-white/80 bg-white/60 p-6 shadow-[var(--shadow-soft)] backdrop-blur-2xl sm:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]">
+          <div className="rounded-[28px] border border-white/80 bg-white/60 p-5 shadow-[var(--shadow-soft)] backdrop-blur-2xl sm:rounded-[32px] sm:p-10">
+            <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
               Contato
             </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-5xl">
+            <h1 className="mt-5 text-[clamp(2.25rem,9.6vw,2.85rem)] font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-5xl">
               {contactContent.title}
             </h1>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -56,7 +56,7 @@ export default function ContactPage() {
               contactContent.email,
             ].map((item) => (
               <div
-                className="rounded-[24px] border border-[var(--color-line)] bg-white/86 p-6 text-base leading-7 text-[var(--color-text)] shadow-[var(--shadow-soft)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--color-accent-soft)] hover:bg-white hover:shadow-[var(--shadow-lift)]"
+                className="rounded-[22px] border border-[var(--color-line)] bg-white/86 p-5 text-base leading-8 text-[var(--color-text)] shadow-[var(--shadow-soft)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--color-accent-soft)] hover:bg-white hover:shadow-[var(--shadow-lift)] sm:rounded-[24px] sm:p-6 sm:leading-7"
                 key={item}
               >
                 {item}

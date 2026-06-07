@@ -47,8 +47,8 @@ export function EditorialSection({
               <p
                 className={
                   isNavy
-                    ? "text-base font-semibold uppercase tracking-[0.09em] text-[var(--color-accent)]"
-                    : "text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]"
+                    ? "text-base font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-accent)] sm:tracking-[0.09em]"
+                    : "text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]"
                 }
               >
                 {eyebrow}
@@ -57,8 +57,8 @@ export function EditorialSection({
             <h2
               className={
                 isNavy
-                  ? "mt-5 text-[2.65rem] font-semibold leading-[1.04] tracking-tight text-white sm:text-[3.35rem] lg:text-[3.85rem]"
-                  : "mt-4 text-3xl font-semibold leading-tight tracking-tight text-[var(--color-navy)] sm:text-4xl lg:text-5xl"
+                  ? "mt-5 text-[clamp(2.15rem,9vw,2.9rem)] font-semibold leading-[1.06] tracking-tight text-white sm:text-[3.35rem] lg:text-[3.85rem]"
+                  : "mt-4 text-[clamp(2rem,8vw,2.55rem)] font-semibold leading-[1.1] tracking-tight text-[var(--color-navy)] sm:text-4xl lg:text-5xl"
               }
             >
               {title}
@@ -67,8 +67,8 @@ export function EditorialSection({
               <p
                 className={
                   isNavy
-                    ? "mt-6 text-xl font-medium leading-8 text-white/90 sm:text-2xl"
-                    : "mt-5 text-xl font-medium text-[var(--color-brand-blue)]"
+                    ? "mt-5 text-lg font-medium leading-8 text-white/90 sm:mt-6 sm:text-2xl"
+                    : "mt-5 text-lg font-medium leading-8 text-[var(--color-brand-blue)] sm:text-xl"
                 }
               >
                 {formatDisplayText(subtitle)}
@@ -82,7 +82,7 @@ export function EditorialSection({
             ) : null}
           </div>
 
-          <Card className={isNavy ? "relative overflow-hidden border-white/10 bg-white/90 p-7 shadow-[0_18px_54px_rgba(0,0,0,0.12)] hover:bg-white" : ""}>
+          <Card className={isNavy ? "relative overflow-hidden border-white/10 bg-white/90 p-6 shadow-[0_18px_54px_rgba(0,0,0,0.12)] hover:bg-white sm:p-7" : ""}>
             {isNavy ? (
               <span className="absolute right-6 top-6 h-12 w-12 rounded-full border border-[rgba(201,161,91,0.16)]" />
             ) : null}
@@ -91,7 +91,7 @@ export function EditorialSection({
                 className={
                   isNavy
                     ? "text-base leading-8 text-[var(--color-text)] sm:text-lg"
-                    : "text-lg leading-8 text-[var(--color-text-muted)]"
+                    : "text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:text-lg"
                 }
               >
                 {description}
@@ -103,8 +103,8 @@ export function EditorialSection({
                   <li
                     className={
                       isNavy
-                        ? "rounded-[24px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white"
-                        : "rounded-[24px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white"
+                        ? "rounded-[22px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white sm:rounded-[24px]"
+                        : "rounded-[22px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white sm:rounded-[24px]"
                     }
                     key={item}
                   >

@@ -22,7 +22,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
           >
             <button
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-5 px-5 py-4 text-left text-sm font-semibold text-[var(--color-navy)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-blue)]"
+              className="flex min-h-14 w-full items-center justify-between gap-5 px-5 py-4 text-left text-base font-semibold leading-6 text-[var(--color-navy)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-blue)]"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               type="button"
             >
@@ -38,7 +38,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
               className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
             >
               <div className="overflow-hidden">
-                <p className="px-5 pb-5 text-sm leading-7 text-[var(--color-text-muted)]">
+                <p className="px-5 pb-5 text-base leading-8 text-[var(--color-text-muted)]">
                   {item.answer}
                 </p>
               </div>
