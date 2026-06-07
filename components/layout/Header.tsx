@@ -21,7 +21,7 @@ export function Header() {
         >
           <Image
             alt={`${siteConfig.name} - ${siteConfig.professionalTitle}`}
-            className="absolute left-0 top-[68%] h-24 w-[252px] max-w-none -translate-y-1/2 object-contain sm:h-[6.4rem] sm:w-[358px]"
+            className="absolute left-0 top-1/2 h-24 w-[252px] max-w-none -translate-y-1/2 object-contain sm:h-[6.4rem] sm:w-[358px]"
             height={176}
             priority
             src="/images/eliane/eliane-logotipo.png"
