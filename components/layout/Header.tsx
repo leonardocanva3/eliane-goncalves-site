@@ -15,13 +15,13 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-[var(--color-line)] bg-[rgba(252,252,251,0.78)] shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_10px_40px_rgba(13,43,82,0.035)] backdrop-blur-2xl">
       <Container className="flex min-h-20 items-center justify-between gap-5">
         <Link
-          className="group flex shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+          className="group relative flex h-16 w-[168px] shrink-0 items-center overflow-visible focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] sm:w-[224px]"
           href="/"
           onClick={() => setIsOpen(false)}
         >
           <Image
             alt={`${siteConfig.name} - ${siteConfig.professionalTitle}`}
-            className="h-16 w-[168px] shrink-0 object-contain sm:w-[224px]"
+            className="absolute left-0 top-[68%] h-24 w-[252px] max-w-none -translate-y-1/2 object-contain sm:h-[6.4rem] sm:w-[358px]"
             height={176}
             priority
             src="/images/eliane/eliane-logotipo.png"
