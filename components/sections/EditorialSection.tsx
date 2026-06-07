@@ -1,0 +1,121 @@
+import { Card } from "@/components/ui/Card";
+import { BrandOrnament } from "@/components/ui/BrandOrnament";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
+import { formatDisplayText } from "@/lib/utils/formatDisplayText";
+
+type EditorialSectionProps = {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  items?: string[];
+  tone?: "light" | "navy";
+};
+
+export function EditorialSection({
+  eyebrow,
+  title,
+  subtitle,
+  description,
+  items,
+  tone = "light",
+}: EditorialSectionProps) {
+  const isNavy = tone === "navy";
+
+  return (
+    <Section
+      className={
+        isNavy
+          ? "relative overflow-hidden bg-[var(--color-navy)]"
+          : undefined
+      }
+    >
+      <Container>
+        {isNavy ? (
+          <BrandOrnament className="animate-ornament-float absolute right-[8%] top-10 hidden h-32 w-28 opacity-[0.18] lg:block" />
+        ) : null}
+        <div
+          className={
+            isNavy
+              ? "grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center"
+              : "grid gap-10 lg:grid-cols-[0.82fr_1.18fr]"
+          }
+        >
+          <div className="animate-soft-rise">
+            {eyebrow ? (
+              <p
+                className={
+                  isNavy
+                    ? "text-base font-semibold uppercase tracking-[0.09em] text-[var(--color-accent)]"
+                    : "text-sm font-semibold uppercase tracking-[0.09em] text-[var(--color-brand-blue)]"
+                }
+              >
+                {eyebrow}
+              </p>
+            ) : null}
+            <h2
+              className={
+                isNavy
+                  ? "mt-5 text-[2.65rem] font-semibold leading-[1.04] tracking-tight text-white sm:text-[3.35rem] lg:text-[3.85rem]"
+                  : "mt-4 text-3xl font-semibold leading-tight tracking-tight text-[var(--color-navy)] sm:text-4xl lg:text-5xl"
+              }
+            >
+              {title}
+            </h2>
+            {subtitle ? (
+              <p
+                className={
+                  isNavy
+                    ? "mt-6 text-xl font-medium leading-8 text-white/90 sm:text-2xl"
+                    : "mt-5 text-xl font-medium text-[var(--color-brand-blue)]"
+                }
+              >
+                {formatDisplayText(subtitle)}
+              </p>
+            ) : null}
+            {isNavy ? (
+              <div className="mt-8 flex items-center gap-3">
+                <span className="h-px w-20 bg-[var(--color-accent)]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
+              </div>
+            ) : null}
+          </div>
+
+          <Card className={isNavy ? "relative overflow-hidden border-white/10 bg-white/90 p-7 shadow-[0_18px_54px_rgba(0,0,0,0.12)] hover:bg-white" : ""}>
+            {isNavy ? (
+              <span className="absolute right-6 top-6 h-12 w-12 rounded-full border border-[rgba(201,161,91,0.16)]" />
+            ) : null}
+            {description ? (
+              <p
+                className={
+                  isNavy
+                    ? "text-base leading-8 text-[var(--color-text)] sm:text-lg"
+                    : "text-lg leading-8 text-[var(--color-text-muted)]"
+                }
+              >
+                {description}
+              </p>
+            ) : null}
+            {items?.length ? (
+              <ul className={description ? "mt-8 space-y-4" : "space-y-4"}>
+                {items.map((item) => (
+                  <li
+                    className={
+                      isNavy
+                        ? "rounded-[24px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white"
+                        : "rounded-[24px] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-base leading-8 text-[var(--color-text)] transition hover:border-[var(--color-accent-soft)] hover:bg-white"
+                    }
+                    key={item}
+                  >
+                    {formatDisplayText(item)}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </Card>
+        </div>
+      </Container>
+    </Section>
+  );
+}
