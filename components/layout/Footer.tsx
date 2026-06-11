@@ -51,8 +51,7 @@ export function Footer() {
       </Container>
       <Container className="border-t border-[var(--color-line)] pb-24 pt-6 text-base leading-7 text-[var(--color-text-soft)] sm:pb-8 xl:text-sm xl:leading-6">
         <p>
-          © {new Date().getFullYear()} {siteConfig.name}. Arquitetura inicial
-          preparada para SEO, analytics e expansoes futuras.
+          © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.
         </p>
       </Container>
     </footer>
