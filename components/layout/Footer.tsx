@@ -11,12 +11,12 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center text-center">
           <Image
             alt={`${siteConfig.name} - ${siteConfig.professionalTitle}`}
-            className="mb-8 h-[6rem] w-[300px] object-contain sm:h-[6.5rem] sm:w-[312px]"
+            className="mb-8 h-[180px] w-[180px] object-contain"
             height={176}
             src="/images/eliane/eliane-logotipo.png"
             width={260}
           />
-          <p className="max-w-md text-center text-[16px] leading-[1.8] text-[#6B7280]">
+          <p className="max-w-[320px] text-center text-[16px] leading-[1.8] text-[#6B7280]">
             Psicologia Online e Presencial com Terapia Cognitivo Comportamental
           </p>
         </div>
