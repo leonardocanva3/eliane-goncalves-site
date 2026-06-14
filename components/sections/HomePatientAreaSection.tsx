@@ -36,9 +36,9 @@ export function HomePatientAreaSection() {
                 Um espaço preparado para apoiar sua jornada.
               </h2>
               <p className="mt-5 max-w-2xl text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:mt-6 sm:text-lg">
-                A área do paciente está organizada como uma experiência futura
-                para reunir materiais, orientações e recursos de apoio em um
-                ambiente simples, acolhedor e seguro.
+                A área do paciente apresenta o acompanhamento digital oferecido
+                pela Eliane, com orientações, materiais e recursos acessados por
+                link seguro individual enviado pelo WhatsApp.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {patientPreviewItems.map((item) => (
