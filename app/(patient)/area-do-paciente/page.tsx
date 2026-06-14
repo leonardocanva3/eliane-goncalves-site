@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Section } from "@/components/ui/Section";
 import { contactContent } from "@/content/site/contact";
-import { patientPortalUrl } from "@/lib/constants/patient-area";
 import { whatsappClickAttributes } from "@/lib/analytics/actions";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -15,28 +14,58 @@ export const metadata = buildMetadata({
 });
 
 const steps = [
-  "A paciente realiza seu acompanhamento com a Eliane.",
+  "Quem está em acompanhamento realiza o cuidado com a Eliane.",
   "A Eliane envia um link seguro individual pelo WhatsApp.",
-  "Pelo link, a paciente acessa sua área exclusiva com orientações e materiais.",
+  "Pelo link, cada paciente acessa sua área exclusiva com orientações e materiais.",
 ];
 
 const resources = [
-  "Próximas consultas",
-  "Orientações personalizadas",
-  "Materiais de apoio",
-  "Vídeos recomendados",
-  "Links úteis",
-  "Recursos extras do acompanhamento",
+  {
+    title: "Áudios no Spotify",
+    icon: "🎧",
+    eyebrow: "Spotify",
+    description: "Conteúdos em áudio para apoiar reflexões e práticas combinadas.",
+  },
+  {
+    title: "Vídeos no YouTube",
+    icon: "▶️",
+    eyebrow: "YouTube",
+    description: "Vídeos recomendados para complementar orientações do acompanhamento.",
+  },
+  {
+    title: "PDFs de apoio",
+    icon: "📄",
+    eyebrow: "PDF",
+    description: "Arquivos e orientações organizadas para consulta quando necessário.",
+  },
+  {
+    title: "Livros recomendados",
+    icon: "📚",
+    eyebrow: "Livros",
+    description: "Sugestões de leitura alinhadas aos temas trabalhados em sessão.",
+  },
+  {
+    title: "Links úteis",
+    icon: "🔗",
+    eyebrow: "Links",
+    description: "Atalhos selecionados para facilitar o acesso a recursos importantes.",
+  },
+  {
+    title: "Materiais extras",
+    icon: "✨",
+    eyebrow: "Extras",
+    description: "Recursos adicionais para quem está em acompanhamento com a Eliane.",
+  },
 ];
 
 const mockups = [
   {
     title: "Acesso individual",
     eyebrow: "Link seguro",
-    lines: ["Convite recebido pelo WhatsApp", "Entrada direcionada para paciente"],
+    lines: ["Convite recebido pelo WhatsApp", "Entrada direcionada para pacientes"],
   },
   {
-    title: "Painel da paciente",
+    title: "Painel de acompanhamento",
     eyebrow: "Acompanhamento",
     lines: ["Próxima consulta", "Orientações recentes", "Materiais destacados"],
   },
@@ -103,26 +132,17 @@ export default function PatientAreaPage() {
                 Área do Paciente
               </p>
               <h1 className="mt-5 max-w-4xl text-[clamp(2.25rem,9vw,3.65rem)] font-semibold leading-[1.06] tracking-tight text-[var(--color-navy)]">
-                Área do Paciente: um espaço digital para apoiar seu
+                Área do Paciente: um espaço digital para apoiar o
                 acompanhamento
               </h1>
-              <p className="mt-6 max-w-3xl text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:text-lg">
+              <p className="mt-7 max-w-3xl text-lg leading-9 text-[var(--color-text-muted)] sm:text-xl sm:leading-9">
                 A Eliane Gonçalves oferece um ambiente exclusivo para pacientes
                 acessarem orientações, materiais de apoio e informações
                 importantes de forma simples e segura.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <LinkButton
-                  className="w-full px-7 py-4 sm:w-auto"
-                  href={patientPortalUrl}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Sou paciente e já recebi meu link de acesso
-                </LinkButton>
-              </div>
-              <p className="mt-4 max-w-xl text-sm leading-6 text-[var(--color-text-muted)]">
-                Use apenas se você já recebeu seu link seguro pelo WhatsApp.
+              <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">
+                A página explica como funciona esse apoio digital. O acesso real
+                acontece pelo link individual enviado pela Eliane via WhatsApp.
               </p>
             </div>
 
@@ -134,9 +154,9 @@ export default function PatientAreaPage() {
                 <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight">
                   O caminho principal é pelo link seguro individual.
                 </h2>
-                <p className="mt-4 text-base leading-7 text-white/78">
-                  O acesso real não começa por um login genérico no site. Cada
-                  paciente recebe da Eliane um link próprio pelo WhatsApp, de
+                <p className="mt-5 text-lg leading-8 text-white/82">
+                  O acesso real não começa por uma entrada genérica no site.
+                  Cada paciente recebe da Eliane um link próprio pelo WhatsApp, de
                   acordo com o acompanhamento realizado.
                 </p>
               </div>
@@ -182,7 +202,7 @@ export default function PatientAreaPage() {
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-brand-blue)] text-base font-semibold text-white">
                     {index + 1}
                   </span>
-                  <p className="text-lg font-semibold leading-7 text-[var(--color-navy)]">
+                  <p className="text-xl font-semibold leading-8 text-[var(--color-navy)]">
                     {step}
                   </p>
                 </div>
@@ -201,17 +221,32 @@ export default function PatientAreaPage() {
             <h2 className="mt-4 text-[clamp(1.9rem,7vw,2.75rem)] font-semibold leading-[1.1] tracking-tight text-[var(--color-navy)]">
               Recursos organizados para apoiar o acompanhamento.
             </h2>
+            <p className="mt-5 text-lg leading-9 text-[var(--color-text-muted)] sm:text-xl sm:leading-9">
+              Materiais, vídeos, áudios e links podem ser reunidos em um só
+              lugar, de acordo com as necessidades de quem está em
+              acompanhamento.
+            </p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {resources.map((resource) => (
               <div
-                className="min-h-32 rounded-[24px] border border-[var(--color-line)] bg-white p-6 shadow-[var(--shadow-soft)] transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent-soft)] hover:shadow-[var(--shadow-lift)]"
-                key={resource}
+                className="min-h-48 rounded-[24px] border border-[var(--color-line)] bg-white p-6 shadow-[var(--shadow-soft)] transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent-soft)] hover:shadow-[var(--shadow-lift)]"
+                key={resource.title}
               >
-                <span className="block h-1.5 w-12 rounded-full bg-[var(--color-accent)]" />
-                <h3 className="mt-5 text-xl font-semibold leading-tight tracking-tight text-[var(--color-navy)]">
-                  {resource}
+                <div className="flex items-center justify-between gap-4">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-[18px] border border-[var(--color-accent-soft)] bg-[var(--color-brand-blue-pale)] text-2xl">
+                    {resource.icon}
+                  </span>
+                  <span className="rounded-full border border-[var(--color-line)] bg-[var(--color-surface-muted)] px-3 py-1 text-xs font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)]">
+                    {resource.eyebrow}
+                  </span>
+                </div>
+                <h3 className="mt-6 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-navy)]">
+                  {resource.title}
                 </h3>
+                <p className="mt-4 text-base leading-7 text-[var(--color-text-muted)]">
+                  {resource.description}
+                </p>
               </div>
             ))}
           </div>
@@ -229,7 +264,7 @@ export default function PatientAreaPage() {
                 Acesso individual, vinculado ao acompanhamento.
               </h2>
             </div>
-            <p className="rounded-[24px] border border-[var(--color-line)] bg-white p-6 text-lg leading-8 text-[var(--color-text-muted)] shadow-[var(--shadow-soft)] sm:p-8">
+            <p className="rounded-[24px] border border-[var(--color-line)] bg-white p-6 text-xl leading-9 text-[var(--color-text-muted)] shadow-[var(--shadow-soft)] sm:p-8">
               O acesso é individual. Cada paciente recebe um link seguro
               próprio. As informações são vinculadas ao acompanhamento realizado
               com a profissional.
@@ -245,7 +280,7 @@ export default function PatientAreaPage() {
               Demonstração visual
             </p>
             <h2 className="mt-4 text-[clamp(1.9rem,7vw,2.75rem)] font-semibold leading-[1.1] tracking-tight text-[var(--color-navy)]">
-              Uma prévia limpa do ambiente digital da paciente.
+              Uma prévia limpa do ambiente digital para pacientes.
             </h2>
           </div>
           <div className="mt-8 grid gap-5 lg:grid-cols-3">
@@ -264,7 +299,7 @@ export default function PatientAreaPage() {
       <Section className="bg-white/54 py-12 sm:py-16">
         <Container>
           <div className="flex flex-col gap-5 border-y border-[var(--color-line)] py-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-2xl text-base leading-7 text-[var(--color-text-muted)]">
+            <p className="max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
               Esta experiência digital é disponibilizada com apoio do Meu Painel
               / LM Health.
             </p>
@@ -286,25 +321,17 @@ export default function PatientAreaPage() {
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <h2 className="text-[clamp(1.9rem,7vw,2.65rem)] font-semibold leading-[1.1] tracking-tight">
-                  Já é paciente?
+                  Já recebeu seu link de acesso?
                 </h2>
-                <p className="mt-4 max-w-3xl text-base leading-8 text-white/78 sm:text-lg">
-                  Se você já recebeu seu link de acesso pelo WhatsApp,
-                  utilize-o para entrar na sua área exclusiva. Caso ainda não
-                  tenha recebido, solicite diretamente à profissional.
+                <p className="mt-5 max-w-3xl text-lg leading-9 text-white/82 sm:text-xl sm:leading-9">
+                  Se você já recebeu o link seguro pelo WhatsApp, utilize-o para
+                  acessar sua área exclusiva. Caso ainda não tenha recebido, fale
+                  diretamente com a Eliane.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <LinkButton
-                  className="w-full border border-white/18 bg-white px-7 py-4 text-[var(--color-navy)] hover:bg-[var(--color-surface-muted)] sm:w-auto"
-                  href={patientPortalUrl}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Acessar com meu link seguro
-                </LinkButton>
-                <LinkButton
-                  className="w-full border border-white/22 bg-transparent px-7 py-4 text-white hover:border-white/50 hover:bg-white/10 sm:w-auto"
+                  className="w-full border border-white bg-white px-7 py-4 text-[var(--color-navy)] hover:bg-[var(--color-surface-muted)] sm:w-auto"
                   href={contactContent.whatsappUrl}
                   rel="noopener noreferrer"
                   target="_blank"
