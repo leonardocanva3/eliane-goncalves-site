@@ -331,7 +331,7 @@ export default function PatientAreaPage() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <LinkButton
-                  className="w-full border border-white bg-white px-7 py-4 text-[var(--color-navy)] hover:bg-[var(--color-surface-muted)] sm:w-auto"
+                  className="w-full border-2 border-[#FFFFFF] bg-[#FFFFFF] px-7 py-4 font-bold text-[#0F2D57] opacity-100 transition-opacity duration-200 hover:bg-[#FFFFFF] hover:text-[#0F2D57] hover:opacity-[0.92] sm:w-auto"
                   href={contactContent.whatsappUrl}
                   rel="noopener noreferrer"
                   target="_blank"
