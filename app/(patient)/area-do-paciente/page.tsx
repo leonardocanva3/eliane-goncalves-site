@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
+import { LinkButton } from "@/components/ui/LinkButton";
 import { Section } from "@/components/ui/Section";
+import { patientAreaUrl as defaultPatientAreaUrl } from "@/lib/constants/patient-area";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildMetadata({
@@ -9,14 +11,19 @@ export const metadata = buildMetadata({
   path: "/area-do-paciente",
 });
 
+const patientAreaUrl =
+  process.env.NEXT_PUBLIC_LM_HEALTH_PATIENT_URL ??
+  defaultPatientAreaUrl;
+
 export default function PatientAreaPage() {
   const previewItems = [
     "Orientações",
     "Materiais em PDF",
-    "Vídeos YouTube",
-    "Spotify",
+    "Vídeos de apoio",
+    "Conteúdos em áudio",
     "Exercícios",
     "Livros recomendados",
+    "Informações importantes",
   ];
 
   return (
@@ -28,19 +35,29 @@ export default function PatientAreaPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-center">
             <div className="relative z-10">
               <p className="text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-brand-blue)] sm:tracking-[0.09em]">
-                Preview
+                Área do Paciente
               </p>
               <h1 className="mt-5 text-[clamp(2.25rem,9.6vw,2.9rem)] font-semibold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-[3.3rem]">
-                Área do Paciente
+                Acompanhe seu cuidado com mais clareza
               </h1>
               <p className="mt-6 max-w-3xl text-[1.0625rem] leading-8 text-[var(--color-text-muted)] sm:mt-7 sm:text-lg">
-                [Placeholder: rota reservada para futura area autenticada. Nenhum
-                login, banco de dados ou backend real foi implementado nesta etapa.]
+                Esta área foi criada para facilitar o acesso a orientações,
+                materiais de apoio e informações importantes do seu
+                acompanhamento. Para acessar, utilize o botão abaixo e entre com
+                seus dados de paciente.
               </p>
+              <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+                <LinkButton
+                  className="w-full px-7 py-4 sm:w-auto"
+                  href={patientAreaUrl}
+                >
+                  Acessar minha área do paciente
+                </LinkButton>
+              </div>
             </div>
             <div className="relative z-10 min-h-[21rem] overflow-hidden rounded-[26px] border border-[var(--color-line)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)] sm:rounded-[28px]">
               <div className="absolute left-4 top-4 z-10 rounded-full border border-white/72 bg-white/78 px-4 py-2 text-sm font-semibold uppercase leading-none tracking-[0.08em] text-[var(--color-navy)] shadow-[var(--shadow-soft)] backdrop-blur sm:left-5 sm:top-5">
-                Em preparação
+                Acesso online
               </div>
               <Image
                 alt="Dra. Eliane Gonçalves"
@@ -61,8 +78,8 @@ export default function PatientAreaPage() {
                   {item}
                 </p>
                 <p className="mt-3 text-base leading-8 text-[var(--color-text-muted)] sm:mt-4">
-                  Área preparada para organização futura dentro da experiência
-                  do paciente.
+                  Disponível na área do paciente para apoiar seu processo de
+                  acompanhamento.
                 </p>
               </Card>
             ))}

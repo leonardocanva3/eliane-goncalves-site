@@ -3,6 +3,7 @@ import { BrandOrnament } from "@/components/ui/BrandOrnament";
 import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { Section } from "@/components/ui/Section";
+import { patientAreaUrl } from "@/lib/constants/patient-area";
 
 const patientPreviewItems = [
   "Orientações",
@@ -50,7 +51,7 @@ export function HomePatientAreaSection() {
                 ))}
               </div>
               <div className="mt-9">
-                <LinkButton href="/area-do-paciente" variant="secondary">
+                <LinkButton href={patientAreaUrl} variant="secondary">
                   Conhecer Área do Paciente
                 </LinkButton>
               </div>

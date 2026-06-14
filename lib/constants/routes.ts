@@ -1,4 +1,5 @@
 import { siteModules } from "@/lib/constants/modules";
+import { patientAreaUrl } from "@/lib/constants/patient-area";
 
 export type SiteRoute = {
   href: string;
@@ -14,7 +15,7 @@ const baseNavigation: SiteRoute[] = [
 
 const optionalNavigation: SiteRoute[] = [
   ...(siteModules.enablePatientArea
-    ? [{ href: "/area-do-paciente", label: "Área do Paciente" }]
+    ? [{ href: patientAreaUrl, label: "Área do Paciente" }]
     : []),
   ...(siteModules.enableEbook ? [{ href: "/ebook", label: "E-book" }] : []),
   { href: "/contato", label: "Contato" },
@@ -59,7 +60,7 @@ export const serviceRoutes: SiteRoute[] = [
 
 export const preparedRoutes: SiteRoute[] = [
   ...(siteModules.enablePatientArea
-    ? [{ href: "/area-do-paciente", label: "Área do Paciente" }]
+    ? [{ href: patientAreaUrl, label: "Área do Paciente" }]
     : []),
   ...(siteModules.enableEbook ? [{ href: "/ebook", label: "E-book" }] : []),
 ];
