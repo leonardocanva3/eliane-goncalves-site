@@ -8,15 +8,15 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--color-line)] bg-[var(--color-surface)]">
       <Container className="grid gap-9 py-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:py-14">
-        <div>
+        <div className="flex flex-col items-center justify-center text-center">
           <Image
             alt={`${siteConfig.name} - ${siteConfig.professionalTitle}`}
-            className="h-[4.75rem] w-[210px] object-contain sm:h-20 sm:w-[220px]"
+            className="mb-8 h-[6rem] w-[300px] object-contain sm:h-[6.5rem] sm:w-[312px]"
             height={176}
             src="/images/eliane/eliane-logotipo.png"
             width={260}
           />
-          <p className="mt-3 max-w-md text-base leading-8 text-[var(--color-text-muted)] lg:text-sm lg:leading-7">
+          <p className="max-w-md text-center text-[16px] leading-[1.8] text-[#6B7280]">
             Psicologia Online e Presencial com Terapia Cognitivo Comportamental
           </p>
         </div>
