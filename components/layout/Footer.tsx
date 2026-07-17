@@ -53,6 +53,15 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.
         </p>
+        <p className="mt-1 text-[11px] leading-5 text-[var(--color-text-soft)]/70">
+          Site e SEO Google feito por:{" "}
+          <Link
+            className="hover:text-[var(--color-navy)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+            href="https://www.oleonardomachado.com.br"
+          >
+            www.oleonardomachado.com.br
+          </Link>
+        </p>
       </Container>
     </footer>
   );
