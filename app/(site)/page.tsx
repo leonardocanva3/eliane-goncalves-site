@@ -2,6 +2,7 @@ import { AboutPreview } from "@/components/sections/AboutPreview";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { EditorialSection } from "@/components/sections/EditorialSection";
 import { HomeEbookSection } from "@/components/sections/HomeEbookSection";
+import { HomeSecondBookSection } from "@/components/sections/HomeSecondBookSection";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { HomePatientAreaSection } from "@/components/sections/HomePatientAreaSection";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <HomeHero />
       <AboutPreview />
       <HomeEbookSection />
+      <HomeSecondBookSection />
       <EditorialSection
         eyebrow={onlineServicesContent.title}
         title={onlineServicesContent.subtitle}
